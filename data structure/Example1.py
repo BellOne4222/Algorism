@@ -23,12 +23,11 @@
 
 # 입력
 T = int(input()) # 입력 데이터는 표준 입력을 사용한다. 입력은 T개의 테스트 데이터로 주어진다. 
-# 입력의 첫 번째 줄에는 입력 데이터의 수를 나타내는 정수 T가 주어진다.
-
+                    # 입력의 첫 번째 줄에는 입력 데이터의 수를 나타내는 정수 T가 주어진다.
 for i in range(T): #첫째줄
+    stk = []
+    isVPS = True # vps가 맞는것들을 처리하기 위해서 boolean 값으로 처리
     for ch in input(): 
-        stk = []
-        isVPS = True
         if ch == '(': # ch는 무조건 여는 괄호 아니면 닫는괄호
             stk.append(ch) # 여는 괄호가 들어왔을 때에는 스택에 그대로 ch를 넣음
         else:
